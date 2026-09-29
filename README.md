@@ -17,13 +17,13 @@ avoiding the model-degradation trap that hides the effect in noisy volatility da
 
 ## Key Results
 
-Reconstruction error (RMSE) on the 125-day test set, using the first *k* IMFs:
+Reconstruction error (RMSE) on the 50-day test set:
 
-| k (IMFs used) | Full-sample (leaky) | Train-only (clean) | Leakage |
-|:---:|:---:|:---:|:---:|
-| 1 | 2.49e-4 | 2.86e-4 | **+12.9%** |
-| 3 | 1.82e-4 | 3.03e-4 | **+39.8%** |
-| 5 | 1.26e-4 | 2.73e-4 | **+53.7%** |
+| k | Full-sample (leaky) | Rolling (strict) | Leakage |
+|---|:---:|:---:|:---:|
+| 1 | 5.71e-5 | 6.14e-5 | **+7.5%** |
+| 3 | 5.28e-5 | 7.03e-5 | **+33.2%** |
+| 5 | 8.11e-5 | 1.11e-4 | **+37.2%** |
 
 *Leakage = how much "better" the leaky decomposition appears. This is a false advantage.*
 
@@ -87,7 +87,7 @@ Truncation does.
 |:---:|---|:---:|
 | A | Full sample (404 days) | Yes |
 | B | Train-only (279 days) + ARIMA extrapolation | No |
-| C | Rolling (WIP) | No |
+| C | Rolling CEEMDAN (50-day tested) | No |
 
 ### Why Reconstruction Error, Not Prediction Accuracy?
 
@@ -105,6 +105,13 @@ making the leakage measurable.
 pip install -r requirements.txt
 jupyter notebook notebooks/03_information_leakage.ipynb
 ```
+## Status
+
+- √ Day 1: Data preparation + boundary effects discovery
+- √ Day 2: Information leakage quantification
+- √ Day 3: Rolling decomposition (50-day validation)
+- × Day 4: Full 125-day run (in progress)
+  
 ## References
 Mo, J., et al. (2024). Predictive analysis of the sale-and-purchase shipping market: A PIMSE approach. Transportation Research Part E.
 
@@ -120,11 +127,11 @@ from the notebooks above.
 
 ## Citation
 If you find this analysis useful, please cite:
-@misc{[yourname]2024ceemdan,
+@misc{[ILoveCola1900]2024ceemdan,
   title={Information Leakage in CEEMDAN Decomposition},
-  author={[Your Name]},
+  author={[ILoveCola1900]},
   year={2024},
-  url={https://github.com/[yourname]/[repo]}
+  url={https://github.com/[ILoveCola1900]/[Stock-Data-Analysis-Basic]}
 }
 
 ## Acknowledgments
@@ -132,4 +139,4 @@ Thanks to Prof. Mo Jixian for the PIMSE paper that motivated this investigation
 into validation set construction for time series. 
 
 Author: [Liuye]
-Contact: [Your Email]
+Contact: [liuye1900@ruc.edu.cn]
