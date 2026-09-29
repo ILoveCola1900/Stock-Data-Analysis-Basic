@@ -1,0 +1,2 @@
+n_days,imf_count_distribution,average_elapsed_sec,total_elapsed_min,forecast_correction
+50,"{6: 1, 7: 49}",5.084362225979566,4.237441518332344,centered_and_scaled_ARIMA
