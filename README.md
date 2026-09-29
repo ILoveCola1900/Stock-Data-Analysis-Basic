@@ -50,26 +50,16 @@ Truncation does.
 
 ---
 
-## Project Structure
+## Repository Layout
+
+```text
 .
-├── README.md
-├── requirements.txt
-├── data/
-│ └── rv_series.csv # GK volatility series (404 days)
-├── notebooks/
-│ ├── 01_data_preparation.ipynb # Download + GK volatility
-│ ├── 02_ceemdan_decomposition.ipynb # Decomposition + boundary effects
-│ ├── 03_information_leakage.ipynb # Core leakage experiment
-│ └── 04_rolling_decomposition.ipynb # Rolling decomposition (WIP)
-├── src/
-│ ├── volatility.py # Garman-Klass estimator
-│ ├── decomposition.py # CEEMDAN wrapper
-│ └── evaluation.py # Reconstruction error metrics
-├── results/
-│ ├── figures/ # Key plots
-│ └── tables/ # Comparison tables
-└── report/
-└── REPORT.md # Technical report
+├── data/           Frozen 404-day GK volatility series (rv_series.csv)
+├── notebooks/      Four reproducible notebooks (01–04)
+├── src/            Modular Python: volatility, decomposition, evaluation
+├── results/        Key figures (figures/) and tables (tables/)
+└── report/         Technical report (REPORT.md)
+```
 
 ---
 
