@@ -128,5 +128,5 @@ If you find this analysis useful, please cite:
 Thanks to Prof. Mo Jixian for the PIMSE paper that motivated this investigation 
 into validation set construction for time series. 
 
-Author: [Liuye]
-Contact: [liuye1900@ruc.edu.cn]
+Author: Liuye
+Contact: liuye1900@ruc.edu.cn
