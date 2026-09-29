@@ -1,6 +1,6 @@
 # Information Leakage in CEEMDAN Decomposition for Volatility Forecasting
 
-> **Key Finding**: Full-sample CEEMDAN decomposition shows **12.9%–53.7% lower reconstruction error** 
+> **Key Finding**: Full-sample CEEMDAN decomposition shows **7.5%–37.2% lower reconstruction error** 
 > compared to leakage-free decomposition, with the most severe leakage near extreme market events.
 
 ---
