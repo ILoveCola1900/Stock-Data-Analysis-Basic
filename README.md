@@ -93,8 +93,18 @@ making the leakage measurable.
 
 ```bash
 pip install -r requirements.txt
-jupyter notebook notebooks/03_information_leakage.ipynb
+jupyter notebook
 ```
+Then run the notebooks in order:
+
+01_data_preparation.ipynb — data + GK volatility
+
+02_ceemdan_decomposition.ipynb — decomposition + boundary effects
+
+03_information_leakage.ipynb — leakage quantification
+
+04_rolling_decomposition.ipynb — rolling decomposition
+
 ## Status
 
 - √ Day 1: Data preparation + boundary effects discovery
