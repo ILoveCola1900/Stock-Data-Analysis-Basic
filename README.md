@@ -127,11 +127,11 @@ from the notebooks above.
 
 ## Citation
 If you find this analysis useful, please cite:
-@misc{[ILoveCola1900]2024ceemdan,
+@misc{liuye2024ceemdan,
   title={Information Leakage in CEEMDAN Decomposition},
-  author={[ILoveCola1900]},
+  author={Liuye},
   year={2024},
-  url={https://github.com/[ILoveCola1900]/[Stock-Data-Analysis-Basic]}
+  url={https://github.com/ILoveCola1900/Stock-Data-Analysis-Basic}
 }
 
 ## Acknowledgments
