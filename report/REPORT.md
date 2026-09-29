@@ -1,5 +1,18 @@
 # Rolling CEEMDAN Leakage Audit
 
+**Author**: Liuye  
+**Code**: https://github.com/ILoveCola1900/Stock-Data-Analysis-Basic
+
+## Abstract
+
+CEEMDAN decomposition is widely used in financial forecasting, but most 
+implementations decompose the full sample before train/test splitting, 
+introducing information leakage. This audit quantifies that leakage using 
+a model-free reconstruction error metric on CSI 300 ETF volatility. 
+Full-sample decomposition shows 7.5%–37.2% lower reconstruction error 
+than rolling decomposition, with the effect concentrated in low-frequency 
+IMFs and near extreme events.
+
 ## Data
 
 CSI 300 ETF 510300 Garman-Klass variance.
@@ -54,7 +67,21 @@ The corrected implementation centers and scales each IMF before fitting ARIMA an
 
 At k=1 rolling is very close to fragment+ARIMA and only 7.5% worse than the leaky full-sample decomposition. At k=3 and k=5 rolling is clearly worse than A by 33.2% and 37.2%. Its relation to B is less uniform: 24.7% lower at k=3 and 20.5% higher at k=5.
 
+## Reproducibility
+
+All results are reproducible from notebooks 01–04 in the repository. 
+The frozen 404-day volatility series is stored in `data/rv_series.csv`. 
+Stage 1 and Stage 2 outputs are stored as pickles under `results/` 
+(excluded from version control). Rolling decomposition uses CEEMDAN 
+with trials=100 and a fixed random seed.
+
 ## Not included
 
 - Stage 3, the full 125-day rolling run, has not been executed.
 - Raw OHLC bars are not stored in this repository.
+
+## References
+
+- Mo, J., et al. (2024). Predictive analysis of the sale-and-purchase shipping market: A PIMSE approach. *Transportation Research Part E*.
+- Lin, Y., et al. (2021). Forecasting stock index price using the CEEMDAN-LSTM model.
+- Garman, M. B., & Klass, M. J. (1980). On the estimation of security price volatilities. *Journal of Business*.
